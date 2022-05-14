@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Login form</title>
+    <script>
+        function validate(){
+            var username=document.getElementById("uname");
+            var password=document.getElementById("password");
+            if(username.value.trim()==""||password.value.trim()==""){
+             alert("please fill")
+             return false;
+            }
+            else{
+             return true;
+            }
+        }   
+    </script>
+</head>
+<link rel="stylesheet" href="style login.css">
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>UserName</h2>
+            <form onsubmit="return validate()", action="index.html">
+                <input type="text" placeholder="username" id="uname" required><br>
+                <h2>Password</h2>
+                <input type="password" placeholder="password" id="password" required><br>
+                <a href="#">forgot password</a><br>
+                <button type="submit" value="submit" id="button" onclick=validate()>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
